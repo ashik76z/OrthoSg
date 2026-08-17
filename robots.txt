@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://orthosg.github.io/sitemap.xml
