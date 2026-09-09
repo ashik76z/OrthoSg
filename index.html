@@ -1,301 +1,43 @@
-<!DOCTYPE html>
-<html lang="en-SG">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OrthoSG Finals Coach | Practise Orthopaedic Finals with an AI Examiner</title>
-<meta name="description" content="Practise orthopaedic finals with an AI examiner. Voice viva, Part B OSCE, X-ray interpretation and SBA practice with structured feedback and source-grounded teaching.">
-<meta property="og:title" content="OrthoSG Finals Coach | Practise Orthopaedic Finals with an AI Examiner">
-<meta property="og:description" content="Practise orthopaedic finals with an AI examiner. Voice viva, Part B OSCE, X-ray interpretation and SBA practice with structured feedback and source-grounded teaching.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0E2E56">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="canonical" href="https://orthosg.github.io/">
-<meta property="og:url" content="https://orthosg.github.io/">
-<meta property="og:image" content="https://orthosg.github.io/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OrthoSG — Think clearly. Practise confidently.</title>
+  <meta name="description" content="Your orthopaedic finals revision companion. Practise SBAs, OSCEs, imaging and spoken vivas with OrthoSG GPT. Copy a prompt and start learning.">
+  <meta name="theme-color" content="#08090c">
+  <meta property="og:title" content="OrthoSG"><meta property="og:description" content="Orthopaedic revision, one conversation at a time."><meta property="og:type" content="website"><meta property="og:url" content="https://ortho-sg.vercel.app/"><meta property="og:image" content="https://ortho-sg.vercel.app/og.png">
+  <link rel="icon" href="https://ortho-sg.vercel.app/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://ortho-sg.vercel.app/"><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="scrollbar" aria-hidden="true"></div>
-<header class="nav">
-  <div class="nav-in">
-    <a class="brand" href="index.html"><span class="mark">SG</span> OrthoSG Finals Coach</a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="voice-viva.html" data-feature="voiceViva">Voice Viva</a>
-      <a href="index.html#practice">Practice modes</a>
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#evidence">Evidence</a>
-      <a class="feedback-link" href="feedback.html">Feedback</a>
-      <!-- RESEARCH-NAV-SLOT -->
-      <a class="btn btn-primary btn-sm gpt-link" href="#">Start practising</a>
-    </nav>
-  </div>
-</header>
+<header><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="#">ortho<span>SG</span><i aria-hidden="true">✳</i></a><div class="nav-links"><a href="#practise">Practise</a><a href="#start">How to use</a><a href="about.html">About &amp; evidence</a></div><a class="button small gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open GPT <span aria-hidden="true">↗</span></a></nav></header>
 <main id="main">
-
-<section class="first">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow rise rise-1">AI Orthopaedic Finals Coach</p>
-      <h1 class="rise rise-2">Practise orthopaedic finals <span class="accent">with an AI examiner.</span></h1>
-      <p class="lede rise rise-3" style="font-size:1.08rem">Viva, OSCE, imaging and SBA practice with structured feedback and source-grounded teaching. You attempt first. Feedback comes second.</p>
-      <p class="strapline rise rise-3">Voice viva &bull; Part B OSCE &bull; X-rays &bull; SBAs &bull; Targeted revision</p>
-      <div class="cta-row rise rise-4">
-        <a class="btn btn-primary gpt-link" href="#">Start practising</a>
-        <a class="btn btn-ghost" href="voice-viva.html" data-feature="voiceViva">&#127908; Try a Voice Viva</a>
-        <a class="btn btn-ghost" href="#practice" data-feature-off="voiceViva">Choose a practice mode</a>
-      </div>
-      <p class="hint rise rise-5">Free to use with ChatGPT. Some advanced ChatGPT features may have separate usage limits.</p>
-    </div>
-    <div class="mock rise rise-6" aria-label="Example viva station">
-      <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="t">viva &middot; cauda equina syndrome</span></div>
-      <div class="mock-body" id="mockBody">
-        <div class="msg u"><span class="who">You</span>Start a 9-minute Part B viva. Act as the examiner.</div>
-        <div class="msg c"><span class="who">Examiner</span>A 48-year-old with worsening lower back pain reports new difficulty initiating urination. What are the three history domains you would clarify immediately?</div>
-      </div>
-      <div class="mock-controls">
-        <button class="pill" data-mock="answer">Answer</button>
-        <button class="pill" data-mock="feedback">End station</button>
-        <button class="pill" data-mock="harder">Near-transfer</button>
-        <button class="pill" data-mock="passport">Revision Passport</button>
-      </div>
-    </div>
-  </div>
+<section class="hero wrap">
+  <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> YOUR ORTHOPAEDIC REVISION COMPANION</p><h1>Think clearly.<br>Practise <span class="gradient">confidently.</span></h1><p class="intro">Big topics. Small breakthroughs.<br>Meet OrthoSG — your AI study partner for Singapore orthopaedic finals.</p><div class="practice-launcher" id="practise" aria-labelledby="practise-title"><div class="launcher-head"><div><span class="card-label">START PRACTISING</span><h2 id="practise-title">Choose your mode.</h2></div><span class="micro">Copy. Open. Paste.</span></div><div class="practice-options">
+    <article class="practice-option"><span class="mode-number">01</span><h3>SBA practice</h3><p>Commit to an answer, then test your reasoning.</p><p class="mode-prompt sr-only">Give me five formative orthopaedic single best answer questions, one at a time. Hide the answer until I commit and explain my reasoning. Then explain each option and revisit my weakest topic with a new question.</p><div><button class="copy" type="button" aria-label="Copy SBA practice prompt">Copy prompt</button><a class="gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open OrthoSG ↗</a></div></article>
+    <article class="practice-option"><span class="mode-number">02</span><h3>OSCE / Viva</h3><p>Rehearse a station and refine your structure.</p><p class="mode-prompt sr-only">Run a mock knee examination OSCE. Give me only the candidate task first. Wait until I say “done” before giving formative feedback on my sequence and explanation. Let me repeat the weakest section. Do not infer hands-on competence from my description.</p><div><button class="copy" type="button" aria-label="Copy OSCE and viva prompt">Copy prompt</button><a class="gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open OrthoSG ↗</a></div></article>
+    <article class="practice-option"><span class="mode-number">03</span><h3>Imaging</h3><p>Build and apply a systematic interpretation.</p><p class="mode-prompt sr-only">Give me a fictional, text-described wrist X-ray case for finals revision. Guide me through a systematic read, asking one question at a time. Wait for my interpretation before explaining. Keep the case educational and clearly label it as fictional.</p><div><button class="copy" type="button" aria-label="Copy imaging practice prompt">Copy prompt</button><a class="gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open OrthoSG ↗</a></div></article>
+    <article class="practice-option"><span class="mode-number">04</span><h3>10-minute sprint</h3><p>Turn a weak area into one focused session.</p><p class="mode-prompt sr-only">I am a medical student revising for orthopaedic finals. I have 10 minutes. Run a sprint on hip fractures: ask three questions, one at a time. Wait for my answer, explain my biggest gap and finish with a short recap. Flag uncertainty and do not invent references.</p><div><button class="copy" type="button" aria-label="Copy ten-minute revision sprint prompt">Copy prompt</button><a class="gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open OrthoSG ↗</a></div></article>
+  </div><p id="launcher-copy-status" class="copy-status" role="status" aria-live="polite">Choose a mode to begin an active practice session.</p></div><div class="trust-strip" aria-label="OrthoSG trust statement"><span>Independent formative resource</span><span>Educational use only</span><span>No patient or confidential examination data</span><span>Updated September 2026</span></div></div>
+  <div class="scene" aria-label="Illustrative 3D study cards showing question, reasoning and review"><div class="halo"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="deck"><div class="study-card back"><span class="card-label">03 / REVISIT</span><strong>Make it stick.</strong><div class="skeleton-line"></div><div class="skeleton-line short"></div></div><div class="study-card middle"><span class="card-label">02 / REASON</span><strong>Connect the dots.</strong><div class="skeleton-line"></div><div class="skeleton-line short"></div></div><div class="study-card front"><div class="card-top"><span class="card-label">ORTHOSG / VIVA</span><span class="spark">✳</span></div><div class="joint" aria-hidden="true"><div class="bone bone-top"></div><div class="joint-line"></div><div class="bone bone-bottom"></div></div><strong>One case.<br>A clearer way to think.</strong><div class="card-bottom"><span>YOUR NEXT BREAKTHROUGH</span><span>↗</span></div></div></div><span class="floating-label">Recall. Reason. Repeat.</span></div>
+  <div class="hero-bottom"><span>BUILT AROUND THE WAY YOU LEARN</span><a href="#capabilities">Scroll to explore ↓</a><button id="motion" type="button" aria-pressed="false">Pause motion</button></div>
 </section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Voice Viva</span><span class="dim">&bull;</span><span>Part B OSCE</span><span class="dim">&bull;</span><span>Imaging</span><span class="dim">&bull;</span><span>SBAs</span><span class="dim">&bull;</span><span>Find my weak areas</span><span class="dim">&bull;</span><span>Safety-first reasoning</span><span class="dim">&bull;</span><span>Singapore finals core</span><span class="dim">&bull;</span>
-    <span>Voice Viva</span><span class="dim">&bull;</span><span>Part B OSCE</span><span class="dim">&bull;</span><span>Imaging</span><span class="dim">&bull;</span><span>SBAs</span><span class="dim">&bull;</span><span>Find my weak areas</span><span class="dim">&bull;</span><span>Safety-first reasoning</span><span class="dim">&bull;</span><span>Singapore finals core</span><span class="dim">&bull;</span>
-  </div>
-</div>
-
-<section id="practice" data-num="01">
-  <div class="wrap">
-    <p class="eyebrow">Choose your practice</p>
-    <h2>Pick a mode. Start answering within thirty seconds.</h2>
-    <div class="bento" style="margin-top:26px">
-      <a class="mode-card" href="voice-viva.html" data-feature="voiceViva"><span class="ic">&#127908;</span><h3>Voice Viva</h3><p>Answer aloud and practise real-time clinical reasoning with an AI examiner.</p><span class="go">Practise aloud &rarr;</span></a>
-      <a class="mode-card lg" href="part-b-osce.html"><span class="ic">&#127917;</span><h3>Part B OSCE</h3><p>Timed exam-style stations with structured formative feedback afterwards. Attempt the station, then get a structured self-check.</p><span class="go">Run a station &rarr;</span></a>
-      <a class="mode-card" href="orthopaedic-xrays.html"><span class="ic">&#129703;</span><h3>Imaging</h3><p>Practise systematic interpretation and the viva questions that follow it.</p><span class="go">Read a film &rarr;</span></a>
-      <a class="mode-card wide" href="sba.html"><span class="ic">&#128221;</span><h3>SBAs</h3><p>High-yield single-best-answer questions with reasoning and remediation.</p><span class="go">Start a set &rarr;</span></a>
-      <a class="mode-card" href="weak-areas.html"><span class="ic">&#129504;</span><h3>Find my weak areas</h3><p>A short diagnostic, then targeted revision aimed at what you actually missed.</p><span class="go">Diagnose gaps &rarr;</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="how" data-num="02">
-  <div class="wrap">
-    <p class="eyebrow">How it works</p>
-    <h2>Attempt first. Feedback second. Remediate. Retest.</h2>
-    <p class="lede">Every mode runs the same loop, because showing you a model answer you never attempted teaches almost nothing.</p>
-    <div class="loop" style="margin-top:26px">
-      <div class="step"><span class="n">Step 1</span><h3>Choose a mode</h3><p>Viva, OSCE, imaging or SBA.</p></div>
-      <div class="step"><span class="n">Step 2</span><h3>Attempt before the answer</h3><p>Retrieval comes first. Nothing is revealed until you commit.</p></div>
-      <div class="step"><span class="n">Step 3</span><h3>Structured feedback</h3><p>Strengths, omissions and safety-critical gaps, kept separate.</p></div>
-      <div class="step"><span class="n">Step 4</span><h3>Remediate immediately</h3><p>Two minutes of focused teaching on what you actually missed.</p></div>
-      <div class="step"><span class="n">Step 5</span><h3>Retest</h3><p>A near-transfer question checks whether the principle stuck.</p></div>
-    </div>
-
-    <div class="grid g2" style="margin-top:32px;align-items:start">
-      <div>
-        <h3 style="margin-bottom:12px">What the feedback looks like</h3>
-        <div class="card">
-          <div class="fb-line"><span class="m">&#9989;</span><span><strong>Done well</strong> &mdash; you led with time course and asked about bladder function unprompted.</span></div>
-          <div class="fb-line"><span class="m">&#9888;&#65039;</span><span><strong>Incomplete</strong> &mdash; saddle sensation was mentioned but not characterised.</span></div>
-          <div class="fb-line"><span class="m">&#10060;</span><span><strong>Missed</strong> &mdash; bilateral leg symptoms and new motor weakness.</span></div>
-          <div class="fb-line"><span class="m">&#128680;</span><span><strong>Safety-critical</strong> &mdash; you did not state the need for urgent imaging.</span></div>
-          <div class="fb-line"><span class="m">&#127919;</span><span><strong>One priority</strong> &mdash; always screen bilateral symptoms before closing the history.</span></div>
-        </div>
-      </div>
-      <div>
-        <h3 style="margin-bottom:12px">Why that beats a model answer</h3>
-        <p style="font-size:.94rem;color:var(--ink-2)">A model answer tells you what a good answer contains. It does not tell you which part <em>you</em> left out, or why. Separating strengths from omissions from safety-critical gaps is what makes the next attempt different from the last one.</p>
-        <p style="font-size:.94rem;color:var(--ink-2)">The single improvement priority is deliberate. Five corrections at once produce no change; one produces some.</p>
-        <div class="notice">Formative feedback and any scores are for learning only. They are not evidence of clinical competence and not an official marking scheme.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="why" class="section-dark" data-num="03">
-  <div class="wrap">
-    <p class="eyebrow">Why OrthoSG rather than a general assistant</p>
-    <h2>You can already ask any chatbot about compartment syndrome.</h2>
-    <p class="lede">That is not the hard part. The hard part is being examined on it, being told precisely what you missed, and being made to do it again.</p>
-    <div class="grid g3" style="margin-top:26px">
-      <div class="card"><span class="tag">Examination architecture</span><h3>Built as an examiner, not an encyclopedia</h3><p>Stations start, run and stop. Questions come one at a time. Answers are withheld until you commit.</p></div>
-      <div class="card"><span class="tag">Curation</span><h3>Designed for orthopaedic finals</h3><p>Scope, weighting and difficulty are set for finals, not for general orthopaedic interest.</p></div>
-      <div class="card"><span class="tag">Provenance</span><h3>Source-grounded teaching</h3><p>Claims are mapped to authoritative references, and gaps are flagged rather than filled with confident guesswork.</p></div>
-      <div class="card"><span class="tag">Feedback</span><h3>Structured, not encouraging</h3><p>Strengths, omissions, safety-critical gaps and one priority &mdash; kept visibly separate.</p></div>
-      <div class="card"><span class="tag">Safety</span><h3>Safety-critical omissions are named</h3><p>The things that would harm a patient are called out explicitly, not folded into general feedback.</p></div>
-      <div class="card"><span class="tag">Repetition</span><h3>Made for returning</h3><p>Weak topics come back. Stations get harder. The passport carries progress into your next session.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="evidence" data-num="04">
-  <div class="wrap">
-    <p class="eyebrow">The OrthoSG Evidence Standard</p>
-    <h2>Source grounded. Finals focused. Safety aware.</h2>
-    <p class="lede">A visible quality standard, including the parts that are still in progress.</p>
-    <div class="evidence" style="margin-top:24px">
-      <div class="ev"><span class="k ok">GROUNDED</span><span>Clinical content is curated and progressively source verified against authoritative references, with claim-to-source mapping maintained.</span></div>
-      <div class="ev"><span class="k ok">REVIEWED</span><span>Faculty reviewed where feasible. Legacy material carries partial quality assurance only and is being corrected on a rolling basis.</span></div>
-      <div class="ev"><span class="k ok">RELEVANT</span><span>Scope, weighting and difficulty are set for orthopaedic finals rather than general interest.</span></div>
-      <div class="ev"><span class="k ok">SAFETY CHECKED</span><span>Must-not-miss presentations recur across modes, and safety-critical omissions are named explicitly in feedback.</span></div>
-      <div class="ev"><span class="k chk">CONTEXTUAL</span><span>Thresholds are presented as contextual rather than universal rules, because most of them are.</span></div>
-      <div class="ev"><span class="k chk">LOCAL CHECK</span><span>Where a recommendation depends on institutional or Singapore-specific policy, it is marked for local verification rather than guessed.</span></div>
-    </div>
-    <div class="notice red" style="margin-top:24px">
-      <p style="margin:0">OrthoSG is designed for formative learning and exam preparation. It does not replace clinical supervision, institutional protocols or professional judgement, and it does not certify clinical competence. Do not enter identifiable patient information &mdash; here or in the coach.</p>
-    </div>
-  </div>
-</section>
-
-<section id="prompts">
-  <div class="wrap">
-    <p class="eyebrow">Try this prompt</p>
-    <h2>Copy one. Paste it. You are practising.</h2>
-    <p class="lede" style="margin-bottom:0"><strong>Copy &amp; start</strong> copies the prompt and opens OrthoSG in a new tab &mdash; paste it in and the station begins.</p>
-    <div class="grid g3" id="promptGrid" style="margin-top:26px"></div>
-    <div class="cta-row" style="margin-top:26px"><a class="btn btn-primary gpt-link" href="#">Start practising</a></div>
-  </div>
-</section>
-
-<section class="alt" id="topics">
-  <div class="wrap">
-    <p class="eyebrow">Topic coverage</p>
-    <h2>Six domains, weighted towards finals.</h2>
-    <div class="grid g3" style="margin-top:26px">
-      <div class="card"><span class="tag">Trauma &amp; emergencies</span><p>Open fractures, compartment syndrome, hip fractures, pelvic injuries, dislocations, ankle and distal radius fractures, tibial plateau and femoral shaft injuries, neurovascular assessment.</p></div>
-      <div class="card"><span class="tag">Spine</span><p>Back-pain red flags, cauda equina syndrome, metastatic cord compression, spinal trauma, cervical myelopathy, radiculopathy, lumbar stenosis, inflammatory back pain.</p></div>
-      <div class="card"><span class="tag">Paediatrics</span><p>The limping child, septic arthritis, osteomyelitis, SUFE, supracondylar fractures and other high-yield paediatric presentations.</p></div>
-      <div class="card"><span class="tag">Upper limb &amp; hand</span><p>Shoulder instability, rotator cuff pathology, scaphoid injury and common upper-limb presentations.</p></div>
-      <div class="card"><span class="tag">Hip, knee &amp; sports</span><p>Osteoarthritis, ligament and meniscal pathology, and common hip and knee presentations.</p></div>
-      <div class="card"><span class="tag">Infection &amp; oncology</span><p>The hot joint, musculoskeletal infection, aggressive bone lesions and appropriate escalation.</p></div>
-    </div>
-    <div class="flags" style="margin-top:26px">
-      <span class="flag">Open fractures</span><span class="flag">Compartment syndrome</span><span class="flag">Neurovascular injury</span>
-      <span class="flag">Cauda equina syndrome</span><span class="flag">Metastatic spinal cord compression</span><span class="flag">Septic arthritis</span>
-      <span class="flag">Osteomyelitis</span><span class="flag">SUFE</span><span class="flag">Supracondylar fractures</span>
-      <span class="flag">Knee dislocation</span><span class="flag">Cervical myelopathy</span><span class="flag">The limping child</span>
-    </div>
-    <p class="hint" style="margin-top:14px">Must-not-miss presentations sit in the top layer of the topic map, so they recur across vivas, stations, films and question sets.</p>
-  </div>
-</section>
-
-<section id="passport" data-num="05">
-  <div class="wrap">
-    <p class="eyebrow">Come back and continue</p>
-    <h2>Progress you can carry into the next session.</h2>
-    <p class="lede">Every topic you touch moves between three states as you retrieve it. Mastery does not persist automatically between chats, so the passport is copyable &mdash; paste it into a new session and the coach picks up exactly where you left off.</p>
-
-    <div class="grid g2" style="margin-top:30px;align-items:start">
-      <div>
-        <h3 style="margin-bottom:14px">How to use it &mdash; four steps</h3>
-        <ol class="steps" style="list-style:none;padding:0;margin:0">
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-soft)"><span class="tick now" style="flex:0 0 auto">1</span><span><strong style="font-family:var(--display);color:var(--navy)">Ask for it, any time.</strong><br><span style="font-size:.9rem;color:var(--ink-2)">Say &ldquo;Give me my Revision Passport&rdquo; mid-session or at the end of one.</span></span></li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-soft)"><span class="tick now" style="flex:0 0 auto">2</span><span><strong style="font-family:var(--display);color:var(--navy)">Read your status per topic.</strong><br><span style="font-size:.9rem;color:var(--ink-2)">New, Learning or Secure &mdash; see the legend alongside &mdash; plus any safety-critical omissions logged that session.</span></span></li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line-soft)"><span class="tick now" style="flex:0 0 auto">3</span><span><strong style="font-family:var(--display);color:var(--navy)">Copy the passport.</strong><br><span style="font-size:.9rem;color:var(--ink-2)">One tap &mdash; the prompt box below does this for you.</span></span></li>
-          <li style="display:flex;gap:14px;align-items:flex-start;padding:13px 0"><span class="tick now" style="flex:0 0 auto">4</span><span><strong style="font-family:var(--display);color:var(--navy)">Paste it into your next session.</strong><br><span style="font-size:.9rem;color:var(--ink-2)">Open OrthoSG, paste, and the coach interleaves your weakest topics first instead of starting cold.</span></span></li>
-        </ol>
-        <div style="margin-top:18px"><div class="qbox"><span>Here is my Revision Passport. Continue my revision from my weakest topics.</span><span class="btns"><button class="copy" data-copy="Here is my Revision Passport. Continue my revision from my weakest topics.">Copy</button><button class="copy launch" data-copy="Here is my Revision Passport. Continue my revision from my weakest topics." data-launch>Copy &amp; start &rarr;</button></span></div></div>
-        <p style="font-size:.85rem;color:var(--ink-3);margin-top:14px">Labels describe your revision state only. They are not a judgement about clinical competence.</p>
-      </div>
-
-      <div>
-        <div class="pass">
-          <h3 style="margin-bottom:14px">Revision Passport</h3>
-          <div class="pass-row"><span><code>TRA-03</code> Compartment syndrome</span><span class="status s-learning">Learning</span></div>
-          <div class="pass-row"><span><code>SPI-02</code> Cauda equina syndrome</span><span class="status s-secure">Secure</span></div>
-          <div class="pass-row"><span><code>PED-04</code> SUFE</span><span class="status s-learning">Review tomorrow</span></div>
-          <div class="pass-row"><span><code>UPL-01</code> Shoulder instability</span><span class="status s-new">New</span></div>
-          <div class="pass-row"><span>Safety-critical omissions this session</span><span class="status s-learning">2 logged</span></div>
-        </div>
-        <div class="grid g3" style="margin-top:14px;gap:10px">
-          <div class="card" style="padding:14px"><span class="status s-new" style="margin-bottom:8px;display:inline-block">New</span><p style="font-size:.85rem;margin:0">Not yet attempted, or attempted once without success.</p></div>
-          <div class="card" style="padding:14px"><span class="status s-learning" style="margin-bottom:8px;display:inline-block">Learning</span><p style="font-size:.85rem;margin:0">Partly right. Due for a spaced repeat, usually within a few days.</p></div>
-          <div class="card" style="padding:14px"><span class="status s-secure" style="margin-bottom:8px;display:inline-block">Secure</span><p style="font-size:.85rem;margin:0">Retrieved correctly under pressure, more than once.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq" data-num="06">
-  <div class="wrap narrow">
-    <p class="eyebrow">FAQ</p>
-    <h2 style="margin-bottom:24px">Questions worth asking first.</h2>
-    <details><summary>What does it cost?</summary><div class="body"><p>Free to use with ChatGPT. Some advanced ChatGPT features, such as image upload and file analysis, may have separate usage limits set by ChatGPT. The core experience &mdash; viva, OSCE, SBAs, reasoning, remediation and revision planning &mdash; works through conversation alone.</p></div></details>
-    <details><summary>Is this affiliated with my medical school?</summary><div class="body"><p>No. It is an independent educational revision tool and is not affiliated with or endorsed by YLL, LKCMedicine, Duke-NUS or any healthcare institution.</p></div></details>
-    <details><summary>Does it contain real examination questions?</summary><div class="body"><p>No. Practice questions and stations are original formative revision material. They are not confidential examination content and not official marking schemes.</p></div></details>
-    <details><summary>Can it predict my finals?</summary><div class="body"><p>No. Curriculum mapping helps you prioritise revision. It is not an examination blueprint, a frequency prediction or a guarantee of what will be examined.</p></div></details>
-    <details><summary>Does a good score mean I am competent?</summary><div class="body"><p>No, and this matters. Scores from any mode, including voice, are formative only. They indicate how you performed on generated practice material. They are not evidence of clinical competence and do not certify anything.</p></div></details>
-    <details><summary>Does it remember my progress?</summary><div class="body"><p>Progress labels operate within the current session. Ask for a Revision Passport and paste it into your next chat to carry your progress forward.</p></div></details>
-    <details><summary>Can I use it for real patients?</summary><div class="body"><p>No. It is designed for education, not patient-specific or real-time clinical decisions. Use fictional or de-identified cases, never enter identifiable patient information, and follow your supervisors and local pathways.</p></div></details>
-    <details><summary>What do I do if it tells me something wrong?</summary><div class="body"><p>Report it. Use the <a class="feedback-link" href="feedback.html">feedback form</a> and include the topic and the prompt you used. Reports of clinically unsafe content are reviewed by a clinician before any change is made.</p></div></details>
-    <!-- RESEARCH-FAQ-SLOT -->
-  </div>
-</section>
-
-<section class="section-dark cta-close">
-  <div class="wrap" style="text-align:center">
-    <p class="eyebrow" style="color:#9FBDD3">Your finals are closer than the syllabus feels</p>
-    <h2 class="mega">Instead of reading another set of notes, <em>get examined.</em></h2>
-    <p class="lede" style="margin:16px auto 28px;color:#C4D6E4">Open the coach and answer your first question within thirty seconds.</p>
-    <a class="btn btn-primary gpt-link" href="#">Start practising</a>
-    <!-- RESEARCH-TRUST-SLOT -->
-  </div>
-</section>
-
-</main>
-<a class="btn btn-primary sticky gpt-link" href="#">Start practising</a>
-<div class="toast" role="status" aria-live="polite"></div>
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="index.html" style="color:#fff;margin-bottom:12px"><span class="mark" style="background:#fff;color:var(--navy)">SG</span> OrthoSG Finals Coach</a>
-        <p style="max-width:44ch">Practise orthopaedic finals with an AI examiner. Formative education &mdash; not certification of clinical competence.</p>
-        <p class="verline" style="color:#8FA6B8"><span class="verslot"></span></p>
-      </div>
-      <div><h4>Practise</h4><ul class="foot-links">
-        <li><a href="voice-viva.html" data-feature="voiceViva">Voice Viva</a></li>
-        <li><a href="part-b-osce.html">Part B OSCE</a></li>
-        <li><a href="orthopaedic-xrays.html">Imaging</a></li>
-        <li><a href="sba.html">SBAs</a></li>
-        <li><a href="weak-areas.html">Find my weak areas</a></li>
-      </ul></div>
-      <div><h4>About</h4><ul class="foot-links">
-        <li><a href="index.html#evidence">Evidence standard</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a class="feedback-link" href="feedback.html">Give 2-minute feedback</a></li>
-        <li><a class="feedback-link" href="feedback.html">Report a problem</a></li>
-        <!-- RESEARCH-FOOTER-SLOT -->
-      </ul></div>
-    </div>
-    <div class="rule">
-      <p>OrthoSG is an educational revision tool. It does not replace clinical supervision, institutional protocols or professional judgement. Not affiliated with or endorsed by Yong Loo Lin School of Medicine, LKCMedicine, Duke-NUS or any healthcare institution. Practice questions and stations are original formative material, not confidential examination content or official marking schemes.</p>
-      <p style="margin:0">&copy; <span class="yr"></span> OrthoSG Finals Coach.</p>
-    </div>
-  </div>
-</footer>
-<script src="assets/config.js"></script>
-<script src="assets/site.js"></script>
-<!-- RESEARCH-SCRIPT-SLOT -->
-
-</body>
-</html>
+<section class="statement wrap" aria-label="Our learning approach"><p class="eyebrow">LESS PASSIVE READING. MORE ACTIVE THINKING.</p><h2 class="scroll-copy"><span>Don’t just recognise the answer.</span> <span>Learn to explain it.</span> <span>Then try again, with a new case.</span></h2><p class="section-note">A conversation that turns revision into practice — at your pace, one question at a time.</p></section>
+<section class="section wrap" id="capabilities"><span id="practice"></span><div class="section-head"><div><p class="eyebrow">MEET YOUR STUDY PARTNER</p><h2>One GPT.<br>More ways to prepare.</h2></div><p>For medical students revising orthopaedics.<br>Bring your level, your topic and your questions.</p></div><div class="cap-grid">
+<article class="feature feature-main"><span class="number">01 / ACTIVE RECALL</span><div class="mini-choices" aria-hidden="true"><span>A</span><span class="selected">B <b>✓</b></span><span>C</span><span>D</span></div><h3>Go beyond the right answer.</h3><p>Practise single best answer questions. Explain your choice before seeing feedback, then unpack why the other options are less suitable.</p><a href="#prompts">Try an SBA prompt ↗</a></article>
+<article class="feature"><span class="number">02 / OSCE & VIVA</span><div class="feature-symbol" aria-hidden="true">“ ”</div><h3>Say it. Structure it. Refine it.</h3><p>Rehearse a candidate task or spoken viva. Ask for feedback on your sequence, reasoning and missed points.</p></article>
+<article class="feature"><span class="number">03 / IMAGING</span><div class="scan-icon" aria-hidden="true"><span>+</span></div><h3>Build a systematic read.</h3><p>Work through educational imaging scenarios and text-described cases. Practise presenting findings and a reasoned interpretation.</p></article>
+<article class="feature"><span class="number">04 / FOCUSED REVISION</span><div class="feature-symbol mint" aria-hidden="true">↗</div><h3>Make ten minutes count.</h3><p>Ask for a topic sprint, a revision plan or a fresh question on something you missed. Save a summary to carry into your next chat.</p></article></div><p class="micro safety">These are formative study workflows, not validated assessments of competence. Check important answers and references against your curriculum and authoritative sources.</p></section>
+<section class="section start-section" id="start"><span id="how"></span><div class="wrap"><p class="eyebrow">FROM CURIOUS TO CONVERSATION</p><h2>Your first session.<br>Three simple steps.</h2><div class="steps"><article><span>01</span><h3>Open OrthoSG.</h3><p>Follow the link to the custom GPT in ChatGPT. Sign in if asked. Availability and limits depend on your account.</p><a class="text-link gpt" href="https://chatgpt.com/g/g-693972e764f481918076f012c25b08e0-ortho-exams-revision-assistant-for-final-year-v7-1">Open OrthoSG GPT ↗</a></article><article><span>02</span><h3>Set your starting point.</h3><p>Tell it your study level, topic and time available. Add your school if relevant, and supply learning objectives you are permitted to share.</p><a class="text-link" href="#prompts">Choose a starter prompt ↓</a></article><article><span>03</span><h3>Think out loud. Try again.</h3><p>Answer before asking for the explanation. Request a hint, challenge the reasoning and finish with a short recap of what to revisit.</p><a class="text-link" href="#practise">Choose another practice mode ↑</a></article></div></div></section>
+<section class="section wrap" id="prompts"><div class="section-head"><div><p class="eyebrow">SKIP THE BLANK PAGE</p><h2>A good prompt.<br>A great place to start.</h2></div><p>Copy one. Open OrthoSG. Paste it in.<br>Change the topic to make it yours.</p></div><div class="prompt-grid">
+<article class="prompt-card"><div><span class="tag">10-MINUTE SPRINT</span><button class="copy" type="button" aria-label="Copy ten-minute sprint prompt">Copy ↗</button></div><h3>A little time. A focused session.</h3><p class="prompt-text">I am a medical student revising for orthopaedic finals. I have 10 minutes. Run a sprint on hip fractures: ask three questions, one at a time. Wait for my answer, explain my biggest gap and finish with a short recap. Flag uncertainty and do not invent references.</p></article>
+<article class="prompt-card"><div><span class="tag">SBA PRACTICE</span><button class="copy" type="button" aria-label="Copy SBA practice prompt">Copy ↗</button></div><h3>Show your reasoning.</h3><p class="prompt-text">Give me five formative orthopaedic single best answer questions, one at a time. Hide the answer until I commit and explain my reasoning. Then explain each option and revisit my weakest topic with a new question.</p></article>
+<article class="prompt-card"><div><span class="tag">OSCE REHEARSAL</span><button class="copy" type="button" aria-label="Copy OSCE rehearsal prompt">Copy ↗</button></div><h3>Your next practice station.</h3><p class="prompt-text">Run a mock knee examination OSCE. Give me only the candidate task first. Wait until I say “done” before giving formative feedback on my sequence and explanation. Let me repeat the weakest section. Do not infer hands-on competence from my description.</p></article>
+<article class="prompt-card"><div><span class="tag">IMAGING LAB</span><button class="copy" type="button" aria-label="Copy imaging prompt">Copy ↗</button></div><h3>Read with a framework.</h3><p class="prompt-text">Give me a fictional, text-described wrist X-ray case for finals revision. Guide me through a systematic read, asking one question at a time. Wait for my interpretation before explaining. Keep the case educational and clearly label it as fictional.</p></article>
+<article class="prompt-card"><div><span class="tag">VOICE VIVA</span><button class="copy" type="button" aria-label="Copy voice viva prompt">Copy ↗</button></div><h3>Find your voice.</h3><p class="prompt-text">Give me a five-minute orthopaedic viva in coach mode. Ask one short question at a time. Please wait until I say “done”. Then correct my biggest gap and test it in a different fictional case. Keep your responses brief.</p></article>
+<article class="prompt-card"><div><span class="tag">REVISION PLAN</span><button class="copy" type="button" aria-label="Copy revision plan prompt">Copy ↗</button></div><h3>Give your next week direction.</h3><p class="prompt-text">Help me plan seven days of orthopaedic revision with 20 minutes a day. First ask about my weak areas and learning objectives. Mix retrieval, cases and review. At the end of each session, give me a short revision summary to copy into my next chat.</p></article></div><p id="copy-status" class="copy-status" role="status" aria-live="polite">Prompts copy to your clipboard. Paste them into OrthoSG to begin.</p></section>
+<section class="voice-section section" id="voice"><div class="wrap voice-grid"><div><p class="eyebrow">REVISION. OUT LOUD.</p><h2>Meet your<br><span class="gradient">viva voice.</span></h2><p class="intro">Practise finding the words.<br>Not just remembering the facts.</p><p>Open OrthoSG in ChatGPT, select the <strong>Voice icon</strong> in the message bar and allow microphone access if prompted. Speak the voice-viva prompt above to begin.</p><p>Voice is a two-way spoken conversation. Dictation simply turns a recording into a text prompt. If Voice is unavailable, paste the same prompt and practise in text.</p><a class="text-link" href="https://help.openai.com/en/articles/20001274">Read OpenAI’s Voice guide ↗</a></div><div class="voice-demo"><span class="card-label">AN EXAMPLE TO SAY ALOUD</span><div class="waveform" aria-hidden="true"></div><blockquote>“Ask one question.<br>Let me think.<br>Then help me improve.”</blockquote><div class="voice-chips"><span>“Slower”</span><span>“Give me a hint”</span><span>“Repeat”</span></div><p class="micro">Illustration only · Start Voice inside ChatGPT</p></div></div><div class="wrap voice-notes"><p><strong>Make space to think.</strong> Use headphones in a quiet place. Request a pause until you say “done”; interruptions can still happen. Correct misheard terms and use your own timer.</p><p><strong>Know the limits.</strong> Custom GPTs use Advanced Voice, not ChatGPT Live. Upload availability varies; image generation, data analysis and custom actions are unavailable in GPT Voice. Check the transcript and verify important content. <a href="https://help.openai.com/en/articles/20001274">Source ↗</a></p></div></section>
+<section class="section wrap faq-section" id="faq"><span id="evidence" hidden></span><p class="eyebrow">A FEW THINGS TO KNOW</p><h2>Clear expectations.<br>Better learning.</h2><div class="faqs"><details><summary>Is this an official medical-school resource?</summary><p>No. OrthoSG is an independent educational resource for formative revision. It is not affiliated with a medical school or healthcare institution. Follow your own curriculum, local guidance and supervisors.</p></details><details><summary>Can I use it for real patient care or an examination?</summary><p>Use fictional or appropriately de-identified educational scenarios only. Do not enter patient identifiers, confidential records or restricted examination material. OrthoSG does not provide patient-specific clinical decisions, certify competence or replace supervision. Follow your assessment rules.</p></details><details><summary>Will it remember my progress?</summary><p>Do not rely on continuity across chats. Ask for a revision summary, check it, and manually paste it into the next conversation. Keep personal and patient identifiers out of that summary.</p></details><details><summary>What if an answer seems wrong?</summary><p>Ask the GPT to explain its uncertainty and provide a verifiable source. Check that the source exists and supports the claim. Use the feedback link below to report a problem without including sensitive information.</p></details></div></section>
+<section class="feedback wrap" id="feedback"><p class="eyebrow">HELP SHAPE WHAT COMES NEXT</p><h2>Better with your feedback.</h2><p>Something helpful? Something missing?<br>Tell us what would make your next session better.</p><a class="button" href="https://forms.gle/eQ61Pxj2G6DMyGLh9">Share feedback <span aria-hidden="true">↗</span></a><p class="micro">Opens the existing Google feedback form. Please leave out patient details,<br>personal identifiers and confidential assessment content.</p></section>
+</main><footer class="wrap"><a class="brand" href="#">ortho<span>SG</span><i aria-hidden="true">✳</i></a><p>© 2026 OrthoSG · Independent educational resource.<br>Formative learning. Human judgement. Always.</p><div class="footer-links"><a href="about.html">About &amp; evidence</a><a href="#practise">Practise ↑</a></div></footer>
+</body></html>
